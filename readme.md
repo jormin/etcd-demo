@@ -27,13 +27,13 @@ Etcd Demo
 |             | role delete            | 删除角色                                     | ✅    |
 |             | role grant-permission  | 角色授权                                     | ✅    |
 |             | role revoke-permission | 撤销角色授权                                 | ✅    |
-| user        | user add               | 添加用户                                     |      |
-|             | user list              | 用户列表                                     |      |
-|             | user get               | 获取用户信息                                 |      |
-|             | user delete            | 删除用户                                     |      |
-|             | user passwd            | 修改密码                                     |      |
-|             | user grant-role        | 用户绑定角色                                 |      |
-|             | user revoke-role       | 撤销用户角色                                 |      |
+| user        | user add               | 添加用户                                     | ✅    |
+|             | user list              | 用户列表                                     | ✅    |
+|             | user get               | 获取用户信息                                 | ✅    |
+|             | user delete            | 删除用户                                     | ✅    |
+|             | user passwd            | 修改密码                                     | ✅    |
+|             | user grant-role        | 用户绑定角色                                 | ✅    |
+|             | user revoke-role       | 撤销用户角色                                 | ✅    |
 | lease       | lease list             | 租约列表                                     |      |
 |             | lease grant            | 生成租约                                     |      |
 |             | lease revoke           | 撤销租约                                     |      |
