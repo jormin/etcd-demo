@@ -46,7 +46,7 @@ Etcd Demo
 |             | del                    | 删除kv                                       | ✅    |
 |             | watch                  | 监听key                                      | ✅    |
 | txn         | txn                    | 开启事务                                     | ✅    |
-| lock        | lock                   | 分布式锁                                     |      |
+| lock        | lock                   | 分布式锁                                     | ✅    |
 | snapshot    | snapshot save          | 保存快照                                     | ✅    |
 |             | snapshot status        | 校验快照                                     | ---  |
 |             | snapshot restore       | 从快照恢复                                   | ---  |
