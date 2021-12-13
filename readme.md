@@ -41,10 +41,10 @@ Etcd Demo
 |             | lease revoke           | 撤销租约                                     | ✅    |
 |             | lease timetolive       | 查看租约期限信息                             | ✅    |
 |             | lease keep-alive       | 保持租约不过期                               | ✅    |
-| normal      | put                    | 设置kv                                       |      |
-|             | get                    | 查看kv                                       |      |
-|             | del                    | 删除kv                                       |      |
-|             | watch                  | 监听key                                      |      |
+| normal      | put                    | 设置kv                                       | ✅    |
+|             | get                    | 查看kv                                       | ✅    |
+|             | del                    | 删除kv                                       | ✅    |
+|             | watch                  | 监听key                                      | ✅    |
 | txn         | txn                    | 开启事务                                     |      |
 | lock        | lock                   | 分布式锁                                     |      |
 | snapshop    | snapshop save          | 保存快照                                     |      |
@@ -54,11 +54,11 @@ Etcd Demo
 |             | alarm disarm           | 接触警报                                     |      |
 | check       | check datascale        | 检查内存使用情况                             |      |
 |             | check perf             | 查看集群性能                                 |      |
-| other       | compaction             | 缩 etcd 中的事件历史                         |      |
-|             | completion             | 生成完成脚本                                 |      |
-|             | defrag                 | 对具有给定端点的 etcd 成员的存储进行碎片整理 |      |
-|             | elect                  | 观察并参与leader选举                         |      |
-|             | make-mirror            | 在目标 etcd 集群上创建镜像                   |      |
+| other       | compaction             | 缩 etcd 中的事件历史                         | ---  |
+|             | completion             | 生成完成脚本                                 | ---  |
+|             | defrag                 | 对具有给定端点的 etcd 成员的存储进行碎片整理 | ---  |
+|             | elect                  | 观察并参与leader选举                         | ---  |
+|             | make-mirror            | 在目标 etcd 集群上创建镜像                   | ---  |
 
 
 
