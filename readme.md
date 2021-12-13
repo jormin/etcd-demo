@@ -36,11 +36,11 @@ Etcd Demo
 |             | user passwd            | 修改密码                                     | ✅    |
 |             | user grant-role        | 用户绑定角色                                 | ✅    |
 |             | user revoke-role       | 撤销用户角色                                 | ✅    |
-| lease       | lease list             | 租约列表                                     |      |
-|             | lease grant            | 生成租约                                     |      |
-|             | lease revoke           | 撤销租约                                     |      |
-|             | lease timetolive       | 查看租约期限信息                             |      |
-|             | lease keep-alive       | 保持租约不过期                               |      |
+| lease       | lease list             | 租约列表                                     | ✅    |
+|             | lease grant            | 生成租约                                     | ✅    |
+|             | lease revoke           | 撤销租约                                     | ✅    |
+|             | lease timetolive       | 查看租约期限信息                             | ✅    |
+|             | lease keep-alive       | 保持租约不过期                               | ✅    |
 | normal      | put                    | 设置kv                                       |      |
 |             | get                    | 查看kv                                       |      |
 |             | del                    | 删除kv                                       |      |
