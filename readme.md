@@ -50,8 +50,8 @@ Etcd Demo
 | snapshot    | snapshot save          | 保存快照                                     | ✅    |
 |             | snapshot status        | 校验快照                                     | ---  |
 |             | snapshot restore       | 从快照恢复                                   | ---  |
-| alarm       | alarm list             | 获取警报列表                                 |      |
-|             | alarm disarm           | 接触警报                                     |      |
+| alarm       | alarm list             | 获取警报列表                                 | ✅    |
+|             | alarm disarm           | 解除警报                                     | ✅    |
 | check       | check datascale        | 检查内存使用情况                             |      |
 |             | check perf             | 查看集群性能                                 |      |
 | other       | compaction             | 缩 etcd 中的事件历史                         | ---  |
