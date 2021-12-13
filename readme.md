@@ -10,10 +10,10 @@ Etcd Demo
 
 | 模块        | 命令                   | 说明                                         | 进度 |
 | ----------- | ---------------------- | -------------------------------------------- | ---- |
-| version     | version                | 查看版本信息                                 |      |
+| version     | version                | 查看版本信息                                 | ---  |
 | endpoint    | endpoint status        | 查看节点状态                                 | ✅    |
 |             | endpoint hashkv        | 查看节点历史hash                             | ✅    |
-|             | endpoint health        | 查看节点状态                                 |      |
+|             | endpoint health        | 查看节点状态                                 | ---  |
 | member      | member list            | 获取成员列表                                 | ✅    |
 |             | member add             | 添加成员                                     | ✅    |
 |             | member update          | 更新成员                                     | ✅    |
@@ -47,9 +47,9 @@ Etcd Demo
 |             | watch                  | 监听key                                      | ✅    |
 | txn         | txn                    | 开启事务                                     |      |
 | lock        | lock                   | 分布式锁                                     |      |
-| snapshop    | snapshop save          | 保存快照                                     |      |
-|             | snapshot status        | 校验快照                                     |      |
-|             | snapshot restore       | 从快照恢复                                   |      |
+| snapshot    | snapshot save          | 保存快照                                     | ✅    |
+|             | snapshot status        | 校验快照                                     | ---  |
+|             | snapshot restore       | 从快照恢复                                   | ---  |
 | alarm       | alarm list             | 获取警报列表                                 |      |
 |             | alarm disarm           | 接触警报                                     |      |
 | check       | check datascale        | 检查内存使用情况                             |      |
