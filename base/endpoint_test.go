@@ -12,6 +12,6 @@ func TestHashKV(t *testing.T) {
 // TestStatus 测试获取状态
 func TestStatus(t *testing.T) {
 	if err := Status(); err != nil {
-		t.Errorf("HashKV() error = %v", err)
+		t.Errorf("Status() error = %v", err)
 	}
 }

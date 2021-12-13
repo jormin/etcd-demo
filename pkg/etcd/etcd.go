@@ -17,10 +17,11 @@ var Endpoints = []string{
 func GetEtcdClient() *clientv3.Client {
 	cli, err := clientv3.New(
 		clientv3.Config{
-			Endpoints:   Endpoints,
-			DialTimeout: time.Second * 5,
-			Username:    "root",
-			Password:    "111111",
+			Endpoints:            Endpoints,
+			DialTimeout:          time.Second * 30,
+			DialKeepAliveTimeout: time.Second * 30,
+			Username:             "root",
+			Password:             "111111",
 		},
 	)
 	if err != nil {
