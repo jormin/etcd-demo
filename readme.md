@@ -13,7 +13,7 @@ Etcd Demo
 | version     | version                | 查看版本信息                                 | ---  |
 | endpoint    | endpoint status        | 查看节点状态                                 | ✅    |
 |             | endpoint hashkv        | 查看节点历史hash                             | ✅    |
-|             | endpoint health        | 查看节点状态                                 | ---  |
+|             | endpoint health        | 查看节点健康状况                              | ---  |
 | member      | member list            | 获取成员列表                                 | ✅    |
 |             | member add             | 添加成员                                     | ✅    |
 |             | member update          | 更新成员                                     | ✅    |
