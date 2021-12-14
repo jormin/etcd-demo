@@ -52,8 +52,8 @@ Etcd Demo
 |             | snapshot restore       | 从快照恢复                                   | ---  |
 | alarm       | alarm list             | 获取警报列表                                 | ✅    |
 |             | alarm disarm           | 解除警报                                     | ✅    |
-| check       | check datascale        | 检查内存使用情况                             | ✅    |
-|             | check perf             | 查看集群性能                                 | ✅    |
+| check       | check datascale        | 检查内存使用情况                             | ---    |
+|             | check perf             | 查看集群性能                                 | ---    |
 | other       | compaction             | 压缩 etcd 中的事件历史                       | ---  |
 |             | completion             | 生成完成脚本                                 | ---  |
 |             | defrag                 | 对具有给定端点的 etcd 成员的存储进行碎片整理 | ---  |
