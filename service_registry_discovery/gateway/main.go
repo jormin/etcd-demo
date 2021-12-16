@@ -84,7 +84,7 @@ func GetGoodsList(w http.ResponseWriter, r *http.Request) {
 	}
 	client, endpoint, err := GetSvcEndpoin(ServiceGoods)
 	fmt.Printf(
-		"trace_id: %d, get goods endpoint result: client=%s, endpoint=%s, error=%s\n", traceID, client, endpoint, err,
+		"trace_id: %d, get goods endpoint result: client=%s, endpoint=%s, error=%v\n", traceID, client, endpoint, err,
 	)
 	if err != nil {
 		res["code"] = -1
