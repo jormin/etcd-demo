@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway
+  namespace: etcd-demo
+  labels:
+    app: gateway
+spec:
+  # 期望 pod 数量
+  replicas: 10
+  # 新创建的 pod 在运行指定秒数后才视为运行可用，配合就绪探针可以在滚动升级失败的时候阻止升级，避免部署出错的应用
+  minReadySeconds: 4
+  strategy:
+    rollingUpdate:
+      # 滚动升级过程中最多允许超出期望副本数的数量，比如期望3，maxSurge 配置为1，则最多存在4个pod，也可以配置百分比
+      maxSurge: 1
+      # 滚动升级过程中最多允许存在不可用的 pod 数量，配置为0表示升级过程中所有的 pod 都必须可用，即 pod 挨个替换，也可以配置百分比
+      maxUnavailable: 0
+  # 匹配器，匹配 pod 的方式
+  selector:
+    matchLabels:
+      app: gateway
+  template:
+    metadata:
+      name: gateway
+      labels:
+        app: gateway
+    spec:
+      imagePullSecrets:
+        - name: harbor-jormin
+      containers:
+        - name: gateway
+          image: harbor.wcxst.com/etcd-demo/gateway:latest
+          # 就绪探针
+          readinessProbe:
+            # 执行周期，单位：秒
+            periodSeconds: 1
+            # 初始化延迟，单位：秒
+            initialDelaySeconds: 3
+            httpGet:
+              path: /
+              port: 80
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: gateway
+  namespace: etcd-demo
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: gateway
+
+---
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: gateway
+  namespace: etcd-demo
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`etcd-demo.local.com`) && PathPrefix(`/`)
+      kind: Rule
+      services:
+        - name: gateway
+          port: 80
