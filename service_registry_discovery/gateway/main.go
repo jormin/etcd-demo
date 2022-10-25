@@ -179,8 +179,7 @@ func GetSvcEndpoin(svc string) (key, endpoint string, err error) {
 	if len(endpoints) == 0 {
 		return "", "", errors.New(fmt.Sprintf("%s服务不可用，请稍后再试", svc))
 	}
-	num := len(endpoints)
-	keys := make([]string, num)
+	keys := make([]string, 0)
 	for v := range endpoints {
 		keys = append(keys, v)
 	}
