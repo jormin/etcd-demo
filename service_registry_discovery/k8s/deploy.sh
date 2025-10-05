@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# gateway
+kubectl delete -f namespace.yaml
+
 cd deploy
-kubectl delete -f gateway.yaml
-kubectl delete -f goods.yaml
+kubectl delete -f .
 kubectl apply -f .

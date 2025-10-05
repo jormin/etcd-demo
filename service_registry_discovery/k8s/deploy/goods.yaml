@@ -30,7 +30,7 @@ spec:
         - name: harbor-jormin
       containers:
         - name: goods
-          image: harbor.wcxst.com/etcd-demo/goods:latest
+          image: harbor.wcxst.com/demo/etcd-goods:latest
           # 就绪探针
           readinessProbe:
             # 执行周期，单位：秒

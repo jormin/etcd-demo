@@ -30,7 +30,7 @@ spec:
         - name: harbor-jormin
       containers:
         - name: gateway
-          image: harbor.wcxst.com/etcd-demo/gateway:latest
+          image: harbor.wcxst.com/demo/etcd-gateway:latest
           # 就绪探针
           readinessProbe:
             # 执行周期，单位：秒
@@ -66,7 +66,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`etcd-demo.local.com`) && PathPrefix(`/`)
+    - match: Host(`etcd-demo.wcxst.com`) && PathPrefix(`/`)
       kind: Rule
       services:
         - name: gateway
